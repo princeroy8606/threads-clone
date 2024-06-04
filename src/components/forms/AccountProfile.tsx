@@ -16,14 +16,14 @@ import { usePathname, useRouter } from 'next/navigation';
 
 interface Props {
     user: {
-        id: string;
-        objectId: string;
-        username: string;
-        name: string;
-        bio: string;
-        image: string;
+        id: any;
+        objectId: any;
+        username: any | null;
+        name: any;
+        bio: any;
+        image: any;
     };
-    btnTitle: string;
+    btnTitle: any;
 }
 
 const AccountProfile = ({ user, btnTitle }: Props) => {
@@ -101,7 +101,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                         <FormItem className='flex items-center gap-4'>
                             <FormLabel className='account-form_image-label'>
                                 {
-                                    field?.value ? (<Image src={field?.value} alt='profile_photo' width={96} height={96} property className='rounded-full object-contain' />)
+                                    field?.value ? (<Image src={field?.value} alt='profile_photo' width={96} height={96} priority className='rounded-full object-contain' />)
                                         : (<Image src="/assets/profile.svg" alt='profile_photo' width={24} height={24} className='object-contain' />)
                                 }
                             </FormLabel>

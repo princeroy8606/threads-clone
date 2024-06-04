@@ -5,7 +5,7 @@ import User from "../models/user.model"
 import { connecToDB } from "../mongoose"
 
 export async function updateUser(
-    userId: string,
+    userId: string | null,
     username: string,
     name: string,
     bio: string,
