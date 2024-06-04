@@ -4,7 +4,7 @@ import { currentUser } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
 
 
-async function Page(params: type) {
+async function Page() {
     const user = await currentUser()
     if (!user) return null
 
